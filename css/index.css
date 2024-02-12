@@ -1,0 +1,47 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 15px;
+    width: 390px;
+}
+
+.navContainer{
+    display: flex;
+    padding: 5px;
+    background-color: gray;
+    border-radius: 30px;
+    width: 80%;
+    gap: 5px;
+}
+
+
+
+
+
+/* footer Styles */
+
+.footerContainer{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 740px;
+    background-color: gray;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.footerContainer img{
+    width: 25px;
+}
+
+.navContainer img{
+    width: 20px;
+}
+
+#video {
+    display: none;
+}

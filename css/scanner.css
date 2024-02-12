@@ -1,0 +1,20 @@
+.scannerHeader{
+    font-size: 10px;
+}
+body{
+    padding: 15px;
+    width: 390px;
+}
+
+.videoContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#barCodeOn{
+    width: 100px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}

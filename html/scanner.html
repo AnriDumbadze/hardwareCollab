@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/scanner.css">
+</head>
+<body>
+    <div class="scannerHeader">
+        <h1>აქ შეგიძლიათ დაასკანეროთ პროდუქტები</h1>
+    </div>
+    <main>
+        <div class="videoContainer">
+            <video id="video" width="80%" autoplay></video>
+        </div>
+        <div class="scannerButton">
+            <button id="barCodeOn">დამასკანერე</button>
+        </div>
+    </main>
+    
+</body>
+</html>
+
+
+
+<canvas id="canvas" style="display:none;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
+<script src="../barcodeScanner.js"></script>
+<div id="output"></div>
