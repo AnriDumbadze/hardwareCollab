@@ -6,36 +6,147 @@
 }
 body{
     padding: 15px;
-    width: 390px;
+    width: 100dvw;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 
 .navContainer{
     display: flex;
-    padding: 5px;
-    background-color: gray;
+    background-color: rgba(241, 241, 241, 1);
+    padding: 10px;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+.leftInfo{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    gap: 10px;
+    font-weight: bolder;
+}
+
+.rightMenuContainer{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 15%;
+}
+
+.profileContainer{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(241, 241, 241, 0.805);
     border-radius: 30px;
-    width: 80%;
+    padding: 15px;
+    gap: 12px;
+}
+
+.topPart{
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
+.numberSpan{
+    font-weight: bolder;
+    font-size: 22px;
+}
 
+.middlePart{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
+.profileSpan{
+    font-weight: bolder;
+    font-size: 30px;
+}
 
+.bottomPart{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
 
+.idSpan{
+    font-weight: bolder;
+    font: 28px;
+}
+
+.middleMain{
+    display: flex;
+    justify-content: center;
+}
+
+.partnerPart{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 15%;
+    
+    background-color: rgba(217, 217, 217, 1);
+    width: 80%;
+    font-size: 25px;
+    text-align: center;
+}
+
+.salesHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+    padding: 15px;
+}
+
+.salesHeader img{
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.salesHeader span{
+    font-weight: bolder;
+}
+
+.salesMain{
+    display: flex;
+    max-width: 80%;
+    gap: 10px;
+}
+
+.salesMain img{
+    width: 80%;
+}
+
+.salesPart::-webkit-scrollbar{
+    width: 0;
+}
 /* footer Styles */
+
 
 .footerContainer{
     display: flex;
     justify-content: center;
-    padding: 5px;
-    margin-top: 740px;
+    padding: 10px;
+    align-items: center;
+    margin-top: 15%;
     background-color: gray;
-    align-items: flex-end;
+    max-width: 100%;
     justify-content: space-around;
+    
 }
 
 .footerContainer img{
     width: 25px;
+}
+
+.qrImage{
+    width: 62px;
 }
 
 .navContainer img{

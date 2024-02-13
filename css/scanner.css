@@ -19,3 +19,44 @@ body{
     padding: 5px;
     
 }
+
+#output{
+    display: flex;
+    margin-top: 20%;
+}
+
+.choiceContainer{
+    display: none;
+    display: flex;
+    margin-top: 30%;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.buttonText{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.yesButton{
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    width: 25%;
+}
+
+.noButton{
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    width: 25%;
+}

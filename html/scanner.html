@@ -18,6 +18,16 @@
         <div class="scannerButton">
             <button id="barCodeOn">დამასკანერე</button>
         </div>
+        <div id="output"></div>
+        <div class="choiceContainer">
+            <div class="buttonText">
+                <span>გინდათ დაამატოთ თუ არა პროდუქტი</span>
+            </div>
+            <div class="buttonContainer">
+                <button class="yesButton">დიახ</button>
+                <button class="noButton">არა</button>
+            </div>
+        </div>
     </main>
     
 </body>
@@ -28,4 +38,9 @@
 <canvas id="canvas" style="display:none;"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
 <script src="../barcodeScanner.js"></script>
-<div id="output"></div>
+<script>
+    document.getElementById('output').addEventListener('input', function() {
+        document.querySelector('.choiceContainer').style.display = 'block';
+    });
+</script>
+

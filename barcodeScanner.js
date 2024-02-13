@@ -37,10 +37,10 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
         var outputElement = document.getElementById('output');
     
         // Check if the detected barcode matches the specific barcode
-        if (code === "9789941370342") {
-            outputElement.innerHTML = 'TUNE UP - English Book';
+        if (code === "9789941308123") {
+            outputElement.innerHTML = 'ქართული ლიტერატურა';
             outputElement.style.color = 'green';
-            return; // Return early to exit the event handler
+            return; 
         }
     
         // If the barcode doesn't match, display the detected code in red
