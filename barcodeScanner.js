@@ -2,6 +2,8 @@
 document.getElementById('barCodeOn').addEventListener("click", function(event) {
     // Get video element
     var video = document.getElementById('video');
+    var scannerChoice = document.getElementById('choiceContainer');
+    scannerChoice.classList.remove('active')
     video.style.display = "block";
     // Check if user's browser supports camera access
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -35,17 +37,19 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
     Quagga.onDetected(function(data) {
         var code = data.codeResult.code;
         var outputElement = document.getElementById('output');
-    
+        
         // Check if the detected barcode matches the specific barcode
-        if (code === "9789941308123") {
-            outputElement.innerHTML = 'ქართული ლიტერატურა';
+        if (code === "54491472") {
+            outputElement.innerHTML = 'Coca Cola';
             outputElement.style.color = 'green';
+            scannerChoice.classList.add('active')
             return; 
         }
     
         // If the barcode doesn't match, display the detected code in red
-        outputElement.style.color = 'red';
+        outputElement.style.color = `red`;
         outputElement.innerHTML = 'Barcode detected: ' + code;
     });
+    
     
 });
