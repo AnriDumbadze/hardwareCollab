@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/scanner.css">
+    <link rel="stylesheet" href="../generate.js">
 </head>
 <body>
     <div class="scannerHeader">
@@ -19,16 +20,26 @@
             <button id="barCodeOn">დამასკანერე</button>
         </div>
         <div id="output"></div>
-        <div class="choiceContainer">
+        <div id="choiceContainer" class="choiceContainer">
             <div class="buttonText">
                 <span>გინდათ დაამატოთ თუ არა პროდუქტი</span>
             </div>
             <div class="buttonContainer">
                 <button class="yesButton">დიახ</button>
-                <button class="noButton">არა</button>
+                <button class="yesButton">არა</button>
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="footerContainer">
+            <a href=""><img src="../images/download-removebg-preview (1).png" alt=""></a>
+            <a href=""><img src="../images/tag-icon-vector-16715054-removebg-preview.png" alt=""></a>
+            <a href="../html/scanner.html"><img src="../images/simple-qr-code-icon-the-icon-can-be-used-for-websites-print-templates-presentation-templates-illustrations-etc-free-vector-removebg-preview.png" alt="" class="qrImage"></a>
+            <a href=""><img src="../images/sale.png" alt=""></a>
+            <a href="../html/payment.html"><img src="../images/money.png" alt=""></a>
+        </div>
+    </footer>
     
 </body>
 </html>
@@ -38,6 +49,7 @@
 <canvas id="canvas" style="display:none;"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/quagga/dist/quagga.min.js"></script>
 <script src="../barcodeScanner.js"></script>
+<script src="../dataMap.js"></script>
 <script>
     document.getElementById('output').addEventListener('input', function() {
         document.querySelector('.choiceContainer').style.display = 'block';

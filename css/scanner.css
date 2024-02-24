@@ -17,6 +17,7 @@ body{
     background-color: black;
     color: white;
     padding: 5px;
+    margin-top: 10%;
     
 }
 
@@ -31,6 +32,7 @@ body{
     margin-top: 30%;
     flex-direction: column;
     gap: 25px;
+    display: none;
 }
 
 .buttonText{
@@ -50,13 +52,29 @@ body{
     border-radius: 18px;
     color: black;
     width: 25%;
+    transition: 1s;
 }
 
-.noButton{
-    background-color: red;
+.yesButton:hover{
+    transform: scale(1.2);
+    background-color: darkred;
+    color: white;
+}
+.footerContainer{
+    display: flex;
+    justify-content: center;
     padding: 10px;
-    border: none;
-    border-radius: 18px;
-    color: black;
-    width: 25%;
+    align-items: center;
+    margin-top: 15%;
+    background-color: gray;
+    max-width: 100%;
+    justify-content: space-around;
+    
+}
+
+.footerContainer img{
+    width: 25px;
+}
+.active{
+    display: block !important;
 }
