@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/scanner.css">
     <link rel="stylesheet" href="../generate.js">
+    <link rel="stylesheet" href="../test.css">
 </head>
 <body>
     <div class="scannerHeader">
@@ -26,10 +27,34 @@
             </div>
             <div class="buttonContainer">
                 <button class="yesButton">დიახ</button>
-                <button class="yesButton">არა</button>
+                <button class="noButton">არა</button>
+            </div>
+        </div>
+
+        <div id="videoProductId">
+            <div class="imageText">
+                <img src="../c671960eca06757c86f54c3d1a9bfd20-removebg-preview.png" alt="" class="productImage">
+                <div class="text">
+                    <span class="description">
+                        პროდუკტის შემადგენლობა: წყალი, შაქარი, ნახშირორჟანგი, საღებავი: კარამელი IV, მჟავიანობის რეგულატორი: ფოსფორის მჟავა, მცენარეთა ექსტრაქტები, კოფეინი.
+                    </span>
+                    <span class="info">
+                        კვებითი ღირებულება 100მლ-ზე:
+                    </span>
+                    <span>
+                        ნახშირწყლები- 10.6გრ. 
+                    </span>
+                    <span>
+                        ენერგეტიკული ღირებულება: 42კკალ. 
+                    </span>
+                    <span class="price">
+                        ფასი: 1.70 ლარი
+                    </span>
+                </div>
             </div>
         </div>
     </main>
+
 
     <footer>
         <div class="footerContainer">
@@ -51,8 +76,31 @@
 <script src="../barcodeScanner.js"></script>
 <script src="../dataMap.js"></script>
 <script>
-    document.getElementById('output').addEventListener('input', function() {
-        document.querySelector('.choiceContainer').style.display = 'block';
+document.getElementById('output').addEventListener('input', function() {
+    document.querySelector('.choiceContainer').style.display = 'block';
+});
+
+document.querySelectorAll('.yesButton').forEach(button => {
+    button.addEventListener('click', function() {
+        // Assuming videoProductId is the ID of the video product element
+        document.getElementById('videoProductId').style.display = 'block'; // or 'inline'
+        document.getElementById('videoProductId').style.backgroundColor = 'blue';
     });
+});
+
+
+document.querySelectorAll('.noButton').forEach(button => {
+    button.addEventListener('click', function() {
+        // Assuming videoProductId is the ID of the video product element
+        document.getElementById('videoProductId').style.display = 'none';
+    });
+});
+
 </script>
 
+
+
+
+<!-- document.getElementById('output').addEventListener('input', function() {
+    document.querySelector('.choiceContainer').style.display = 'block';
+}); -->

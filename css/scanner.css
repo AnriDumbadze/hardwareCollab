@@ -35,6 +35,10 @@ body{
     display: none;
 }
 
+#choiceContainer{
+    display: none;
+}
+
 .buttonText{
     display: flex;
     justify-content: center;
@@ -46,6 +50,16 @@ body{
 }
 
 .yesButton{
+    background-color: red;
+    padding: 10px;
+    border: none;
+    border-radius: 18px;
+    color: black;
+    width: 25%;
+    transition: 1s;
+}
+
+.noButton{
     background-color: red;
     padding: 10px;
     border: none;
@@ -77,4 +91,9 @@ body{
 }
 .active{
     display: block !important;
+}
+
+#videoProductId{
+    display: none;
+    margin-top: 15%;
 }
