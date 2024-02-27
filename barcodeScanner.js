@@ -39,7 +39,7 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
         var outputElement = document.getElementById('output');
         
         // Check if the detected barcode matches the specific barcode
-        if (code === "54491472") {
+        if (code === "9789941116933") {
             outputElement.innerHTML = 'Coca Cola';
             outputElement.style.color = 'green';
             scannerChoice.classList.add('active')
