@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="stylesheet" href="css/index.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 10px;
+    gap: 25px;
+  }
+  .header p {
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .contact-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="tel"], .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .form-group textarea {
+    height: 100px;
+  }
+  .form-group button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .form-group button:hover {
+    background: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <p style="font-size: 18px; display: flex; justify-content: space-between;">Contact Us         <a href="../index.html"><img src="../images/headerIcon.svg" alt=""></a></p>
+  <p>Email: example@example.com</p>
+  <span>Phone: +1234567890</span>
+  <span>Company: Self Pay</span>
+
+</div>
+
+<div class="container">
+  <div class="contact-form">
+    <h2>Contact Form</h2>
+    <form action="" method="post">
+      <div class="form-group">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" name="company" value="Self Pay" readonly>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $company = $_POST['company'];
+        $message = $_POST['message'];
+
+        // Email details
+        $to = "dumbadzeanri01@gmail.com"; // Replace with your email
+        $subject = "Contact Form Submission";
+        $body = "Name: $name\nEmail: $email\nPhone: $phone\nCompany: $company\nMessage: $message";
+
+        // Send email
+        if (mail($to, $subject, $body)) {
+            echo "Thank you for your message!";
+        } else {
+            echo "Oops! Something went wrong.";
+        }
+    }
+    ?>
+  </div>
+</div>
+
+</body>
+</html>
