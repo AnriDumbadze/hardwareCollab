@@ -1,4 +1,6 @@
 .scannerHeader{
+    display: flex;
+    gap: 15%;
     font-size: 10px;
 }
 body{
@@ -96,4 +98,8 @@ body{
 #videoProductId{
     display: none;
     margin-top: 15%;
+}
+
+footer{
+    margin-top: 90%;
 }

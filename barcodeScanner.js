@@ -43,8 +43,12 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
             outputElement.innerHTML = 'Coca Cola';
             outputElement.style.color = 'green';
             scannerChoice.classList.add('active')
+            fetch0(code);
             return; 
+            
         }
+
+
     
         // If the barcode doesn't match, display the detected code in red
         outputElement.style.color = `red`;
@@ -53,3 +57,19 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
     
     
 });
+
+function fetch0(data) {
+    fetch('http://localhost:3000', {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(function(res) {
+        console.log(res);
+    })
+    .catch(function(err) {
+        console.error('Error during fetch:', err);
+    });
+}
+
