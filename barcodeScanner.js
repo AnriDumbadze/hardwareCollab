@@ -5,12 +5,18 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
     var scannerChoice = document.getElementById('choiceContainer');
     scannerChoice.classList.remove('active')
     video.style.display = "block";
+
     // Check if user's browser supports camera access
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        // Specify facing mode for the rear camera (environment)
+        var constraints = { video: { facingMode: "environment" } };
+
+        navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
             // Set the video source to the user's camera stream
             video.srcObject = stream;
             video.play();
+        }).catch(function(err) {
+            console.error('Error accessing the camera:', err);
         });
     }
 
@@ -45,17 +51,12 @@ document.getElementById('barCodeOn').addEventListener("click", function(event) {
             scannerChoice.classList.add('active')
             fetch0(code);
             return; 
-            
         }
-
-
     
         // If the barcode doesn't match, display the detected code in red
         outputElement.style.color = `red`;
         outputElement.innerHTML = 'Barcode detected: ' + code;
     });
-    
-    
 });
 
 function fetch0(data) {
@@ -72,4 +73,3 @@ function fetch0(data) {
         console.error('Error during fetch:', err);
     });
 }
-
